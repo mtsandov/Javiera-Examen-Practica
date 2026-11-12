@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Matemáticas 8vo básico – Práctica y simulacro</title>
+<style>
+:root{--bg:#f4f6fb;--c:#fff;--t:#1d2433;--m:#5d667a;--p:#3b5bdb;--pt:#fff;--ok:#2b8a3e;--ko:#c92a2a;--b:#dbe0ec;--okb:#e6f6ea;--kob:#fdeaea;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#131724;--c:#1d2233;--t:#e9ecf5;--m:#9ba4ba;--p:#8da2ff;--pt:#10142a;--ok:#69db7c;--ko:#ff8787;--b:#2f3650;--okb:#1b3324;--kob:#3a2020;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#131724;--c:#1d2233;--t:#e9ecf5;--m:#9ba4ba;--p:#8da2ff;--pt:#10142a;--ok:#69db7c;--ko:#ff8787;--b:#2f3650;--okb:#1b3324;--kob:#3a2020;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--t);padding-bottom:70px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+main{max-width:860px;margin:0 auto;padding:12px}
+h1{font-size:1.35rem;margin:.5rem 0 .1rem}h3{margin:0;font-size:1.05rem}.sub{color:var(--m);margin:0 0 .6rem;font-size:.92rem}
+button{font:inherit;cursor:pointer;border:1px solid var(--b);background:var(--c);color:var(--t);border-radius:10px;padding:8px 13px}
+button:disabled{cursor:default;opacity:.85}
+button.on,button.pri{background:var(--p);color:var(--pt);border-color:var(--p)}
+.tabs{display:flex;gap:6px;margin:.5rem 0 .8rem}.tabs button{flex:1;font-weight:600}
+.card{background:var(--c);border:1px solid var(--b);border-radius:14px;padding:14px;margin-bottom:14px}
+.hd{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:10px}
+.ct{display:flex;gap:4px}.ct button{padding:5px 11px;font-size:.9rem}
+.card[data-t="0"] .pp,.card[data-t="1"] .po{display:none}
+.q{font-size:1.12rem;padding:10px 12px;margin:8px 0;background:var(--bg);border-radius:10px;overflow-x:auto}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.seg{display:flex;gap:4px}.seg button{padding:5px 10px;font-size:.88rem}.sc{color:var(--m);font-size:.9rem}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:8px 0}
+.opt{text-align:center;font-size:1.05rem;min-height:46px}.opt.ok{background:var(--okb);border-color:var(--ok);color:var(--t)}.opt.ko{background:var(--kob);border-color:var(--ko);color:var(--t)}
+.row{display:flex;gap:8px;margin:8px 0}input.ans{flex:1;min-width:0;font:inherit;padding:9px 11px;border:1px solid var(--b);border-radius:10px;background:var(--bg);color:var(--t)}
+.fb{padding:9px 12px;border-radius:10px;margin:8px 0;font-weight:600}.fb.ok{background:var(--okb);color:var(--ok)}.fb.ko{background:var(--kob);color:var(--ko)}
+.sol{font-size:.95rem;color:var(--m);border-left:3px solid var(--b);padding-left:10px;margin:6px 0}.sol b{color:var(--t)}
+.nx{margin-top:6px}.fg{margin-top:8px}.ins{color:var(--m);margin:0 0 4px;font-size:.92rem}
+.stk{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;justify-content:space-between;align-items:center;background:var(--c);border:1px solid var(--b);border-radius:12px;padding:8px 12px;margin-bottom:12px}
+#tm{font-size:1.4rem;font-variant-numeric:tabular-nums}#tm.lo{color:var(--ko)}
+.big{font-size:2rem;font-weight:700;color:var(--p)}
+#kp{position:fixed;left:0;right:0;bottom:0;padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));display:flex;gap:4px;justify-content:center;flex-wrap:wrap;background:var(--c);border-top:1px solid var(--b);z-index:20}
+#kp button{padding:5px 12px;min-width:38px}[hidden]{display:none!important}
+.fr{display:inline-flex;flex-direction:column;text-align:center;vertical-align:middle;margin:0 3px;font-size:.95em}.fr>span:first-child{border-bottom:1.5px solid currentColor;padding:0 4px}.fr>span+span{padding:0 4px}
+.rd{display:inline-flex;align-items:stretch;vertical-align:middle}.rd>b{font-weight:400;font-size:1.3em}.rd>i{font-style:normal;border-top:1.5px solid currentColor;padding:0 3px;margin-top:3px;display:flex;align-items:center}.ix{font-size:.6em;align-self:flex-start;margin-right:-3px}
+</style></head><body><main>
+<h1>📐 Matemáticas · 8vo básico</h1>
+<p class="sub">Practica cada ejercicio del cuestionario y prueba tu nivel con un simulacro de 1 hora.</p>
+<div class="tabs"><button class="on" data-a="main" data-t="0">Cuestionario y práctica</button><button data-a="main" data-t="1">Simulacro (1 hora)</button></div>
+<div id="cu"></div><div id="sim" hidden></div>
+</main>
+<div id="kp" hidden><button data-k="∞">∞</button><button data-k="(">(</button><button data-k=")">)</button><button data-k="[">[</button><button data-k="]">]</button><button data-k="≤">≤</button><button data-k="≥">≥</button><button data-k="^">^</button><button data-k="/">/</button><button data-k="-">−</button></div>
+<script>
+const $=s=>document.querySelector(s),R=(a,b)=>a+Math.floor(Math.random()*(b-a+1)),P=a=>a[R(0,a.length-1)],sh=a=>a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(x=>x[1]),gcd=(a,b)=>b?gcd(b,a%b):Math.abs(a);
+const S=(n,d=1)=>{if(d<0){n=-n;d=-d}const g=gcd(n,d)||1;n/=g;d/=g;return d==1?''+n:n+'/'+d};
+const fr=(a,b)=>`<span class=fr><span>${a}</span><span>${b}</span></span>`,rd=(x,n)=>`<span class=rd>${n?'<sup class=ix>'+n+'</sup>':''}<b>√</b><i>${x}</i></span>`;
+const H=s=>String(s).replace(/(-?\d+)\/(\d+)/g,(m,a,b)=>fr(a,b)).replace(/\^(\d+)/g,'<sup>$1</sup>').replace(/<=/g,'≤').replace(/>=/g,'≥').replace(/-/g,'−');
+const cf=(n,v)=>(n<0?'-':'')+(Math.abs(n)==1?'':Math.abs(n))+v,pl=t=>t.map(([c,v],i)=>(i&&c>0?'+':'')+cf(c,v)).join(''),
+co=(n,v)=>(n<0?'−':'')+(Math.abs(n)==1?'':Math.abs(n))+v,sg=n=>n<0?' − '+(-n):' + '+n,lin=(a,v,b)=>co(a,v)+(b?sg(b):''),sp=(v,e)=>v+'<sup>'+e+'</sup>',fl=o=>({'<=':'>=','>=':'<=','<':'>','>':'<'})[o];
+const W=(n,d)=>{const z=S(n,d);if(!z.includes('/')){n=+z;d=1}const a=z,c=(d==1?[[n+1,1],[n-1,1],[-n,1],[n*2,1],[n+2,1],[n-2,1]]:[[d,n],[n*2,d],[n,d*2],[n+d,d],[n,d+1],[-n,d],[n*3,d]]).filter(p=>p[1]&&p[0]).map(p=>S(...p)).filter(x=>x!=a);return[...new Set(sh(c))].slice(0,3)};
+const cv=(z,v)=>z.includes('/')?z.replace('/',v+'/'):cf(+z,v);
+const ex=(ts,m)=>ts.map((t,i)=>(i?(t<0?' − ':' + '):(t<0?'−':''))+Math.abs(t)+m).join('');
+
+/* ---------- corrección ---------- */
+const num=s=>{s=String(s).replace(/\s/g,'').replace(/,/g,'.').replace(/−/g,'-').replace(/^[a-z]=/i,'');const m=s.match(/^(-?[\d.]+)(?:\/(-?[\d.]+))?$/);return m?(m[2]?+m[1]/+m[2]:+m[1]):NaN};
+const mono=t=>{const f=x=>{const m=x.match(/^(-?[\d.]*)(.*)$/);let c=m[1];c=c==''?1:c=='-'?-1:+c;return[c,m[2]]};const[a,b]=t.split('/');const[x,y]=f(a);let z=[1,''];if(b!=null)z=f(b);return[x/z[0],y+z[1]]};
+const cn=s=>{s=s.toLowerCase().replace(/[\s*·^()]/g,'').replace(/,/g,'.').replace(/[−–]/g,'-').replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]/g,c=>'⁰¹²³⁴⁵⁶⁷⁸⁹'.indexOf(c)).replace(/^[a-z]=/,'');const o={};s.replace(/-/g,'+-').split('+').filter(Boolean).forEach(t=>{const[c,v]=mono(t);const k=(v.match(/[a-z]\d*/g)||[]).map(x=>x.length<2?x+'1':x).sort().join('');o[k]=(o[k]||0)+c});return Object.keys(o).filter(k=>Math.abs(o[k])>1e-9).sort().map(k=>k+':'+o[k].toFixed(3)).join('|')};
+const st_=s=>{s=s.replace(/\s/g,'').replace(/[−–]/g,'-').replace(/≤/g,'<=').replace(/≥/g,'>=').replace(/\+?(∞|inf\w*|oo)/gi,'∞').replace(/;/g,',');const v=x=>x=='-∞'?-Infinity:x=='∞'?Infinity:num(x),fx=(a,i,b,j)=>[a,isFinite(a)&&i,b,isFinite(b)&&j];
+let m=s.match(/^x(<=|>=|<|>)(.+)$/i);if(m){const n=num(m[2]);if(isNaN(n))return;return m[1][0]=='<'?fx(-Infinity,0,n,m[1]=='<='):fx(n,m[1]=='>=',Infinity,0)}
+m=s.match(/^([\(\[])(.+),(.+)([\)\]])$/);if(!m)return;const a=v(m[2]),b=v(m[3]);if(isNaN(a)||isNaN(b))return;return fx(a,m[1]=='[',b,m[4]==']')};
+const eq=(x,y)=>x==y||Math.abs(x-y)<.006;
+const nms=s=>(s.replace(/−/g,'-').match(/-?\d+(\.\d+)?/g)||[]).map(Number).sort((a,b)=>a-b)+'';
+const chk=(c,v)=>{v=v.trim();if(!v)return 0;try{if(c.t=='num')return Math.abs(num(v)-num(c.a))<.006;if(c.t=='poly')return cn(v)==cn(c.a);if(c.t=='nums')return nms(v)==nms(c.a);const x=st_(v),y=st_(c.a);return!!(x&&y&&eq(x[0],y[0])&&eq(x[2],y[2])&&!x[1]==!y[1]&&!x[3]==!y[3])}catch(e){return 0}};
+
+/* ---------- figura ---------- */
+const fig=p=>{const{W:w,h1,w1,h2,d,w2}=p,t=w-w1-w2,Y=h1+h2,u=15,x0=34,y0=22,X=x=>x0+x*u,Yp=y=>y0+(Y-y)*u,
+pts=[[0,0],[0,h1],[w1,h1],[w1,Y],[w1+t,Y],[w1+t,Y-d],[w,Y-d],[w,0]],
+tx=(x,y,s,dx,dy)=>`<text x="${X(x)+dx}" y="${Yp(y)+dy}" text-anchor="middle" font-size="13" fill="currentColor">${s}x</text>`,wd=w*u+x0+20;
+return `<svg viewBox="0 0 ${wd} ${Y*u+y0+30}" style="max-width:${wd}px;width:100%"><polygon points="${pts.map(q=>X(q[0])+','+Yp(q[1])).join(' ')}" fill="none" stroke="#4c7fd0" stroke-width="3"/>${tx(w/2,0,w,0,18)}${tx(0,h1/2,h1,-14,4)}${tx(w1/2,h1,w1,0,15)}${tx(w1,h1+h2/2,h2,-14,4)}${tx(w1+t,Y-d/2,d,-12,4)}${tx(w1+t+w2/2,Y-d,w2,0,-6)}</svg>`};
+const g4=(p,f,nm)=>{const t=p.W-p.w1-p.w2,Y=p.h1+p.h2,r=Y-p.d,per=2*(p.W+Y),lab=p.W+p.h1+p.w1+p.h2+p.d+p.w2,a=(per-f)+'x';
+return{t:'poly',q:`${nm} debe cercar el perímetro de la siguiente figura. El lunes cercó ${f}x. ¿Cuánto falta por cercar?<div class=fg>${fig(p)}</div>`,a,w:[...new Set([per,per+f,lab-f,per-f+t].filter(z=>z>0).map(z=>z+'x'))].filter(z=>z!=a).slice(0,3),s:`Los lados horizontales de arriba suman lo mismo que la base: lado superior = ${p.W}x − ${p.w1}x − ${p.w2}x = ${t}x. Lado derecho = ${p.h1}x + ${p.h2}x − ${p.d}x = ${r}x. Perímetro = ${p.W}x + ${p.h1}x + ${p.w1}x + ${p.h2}x + ${t}x + ${p.d}x + ${p.w2}x + ${r}x = ${per}x. Falta: ${per}x − ${f}x = <b>${per-f}x</b>.`}};
+
+/* ---------- temas ---------- */
+const T=[
+{n:'Raíces de fracciones',i:'Calcula cada raíz.',
+o:{q:`A. ${rd(fr(100,4))} &nbsp; B. ${rd(fr(1,100))} &nbsp; C. ${rd('−'+fr(8,125),3)} &nbsp; D. ${rd(fr(27,1000),3)}`,a:'A = 5 · B = 1/10 · C = −2/5 · D = 3/10. Se saca la raíz del numerador y del denominador por separado (100/4 = 25 → 5).'},
+g(){const a=R(1,12),b=R(2,12),c=Math.random()<.5,k=c?3:2,ng=c&&Math.random()<.4,n=ng?-a:a;return{t:'num',q:rd((ng?'−':'')+fr(a**k,b**k),c?3:0),a:S(n,b),w:W(n,b),s:`Raíz ${c?'cúbica':'cuadrada'} del numerador: ${n}. Del denominador: ${b}. Resultado: <b>${H(S(n,b))}</b>.`}}},
+{n:'Operaciones con raíces',i:'Resuelve la operación.',
+o:{q:`${rd('0.25')} × ${rd(fr(100,36))} <br><br> ${rd('1.8',3)} ÷ ${rd(fr(100,12),3)}`,a:'1) 0.5 × 10/6 = 5/6.  2) ∛(1.8 ÷ 100/12) = ∛0.216 = 0.6 = 3/5.'},
+g(){if(Math.random()<.5){const t=R(2,7),a=R(2,12),b=R(2,9),n=t*a,d=10*b;return{t:'num',q:rd('0.'+String(t*t).padStart(2,'0'))+' × '+rd(fr(a*a,b*b)),a:S(n,d),w:W(n,d),s:`√0.${String(t*t).padStart(2,'0')} = ${t/10} y √(${a*a}/${b*b}) = ${a}/${b}. Multiplica: ${t/10} · ${a}/${b} = <b>${H(S(n,d))}</b>.`}}
+let a=R(1,4),b=R(1,4),k=R(2,5);if(a==b)b=a%4+1;return{t:'num',q:rd(a**3*k,3)+' ÷ '+rd(b**3*k,3),a:S(a,b),w:W(a,b),s:`Junta las raíces: ∛(${a**3*k} ÷ ${b**3*k}) = ∛(${a**3}/${b**3}) = <b>${H(S(a,b))}</b>.`}}},
+{n:'Términos semejantes',i:'Reduce la expresión.',ph:'ej: 3xy',
+o:{q:`${fr('6x',3)} − ${fr('20x',15)} <br><br> −8mn − 6mn + 12.3mn`,a:'1) 2x − 4x/3 = 2x/3.  2) (−8 − 6 + 12.3)mn = −1.7mn.'},
+g(){if(Math.random()<.5){let a,b,c,d,n,dd;do{a=R(1,9);c=R(1,9);b=R(2,6);d=R(2,6);n=a*d-c*b;dd=b*d}while(!n||b==d);const v=P(['x','y','m','a']),z=S(n,dd);return{t:'poly',q:fr(a+v,b)+' − '+fr(c+v,d),a:cv(z,v),w:W(n,dd).map(y=>cv(y,v)),s:`Se resta la parte numérica: ${a}/${b} − ${c}/${d} = ${(a*d)}/${dd} − ${c*b}/${dd} = ${H(z)}. Resultado: <b>${cv(z,v)}</b>.`}}
+const m=P(['mn','xy','ab','pq']),ts=[R(2,9)*P([1,-1]),R(2,9)*P([1,-1]),(R(10,20)+R(1,9)/10)*P([1,-1])],s=+ts.reduce((x,y)=>x+y).toFixed(1),a=cf(s,m);return{t:'poly',q:ex(ts,m),a,w:[...new Set([s+1,s-1,-s,ts.reduce((x,y)=>x+Math.abs(y),0)].map(x=>+x.toFixed(1)).filter(x=>x&&x!=s).map(x=>cf(x,m)))].slice(0,3),s:`Se suman los coeficientes: ${ts.map((t,i)=>i&&t>0?'+'+t:t).join(' ')} = ${s}. Resultado: <b>${a}</b>.`}}},
+{n:'Perímetro de una figura',i:'Resuelve la situación.',ph:'ej: 12x',
+o:(()=>{const c=g4({W:18,h1:2,w1:5,h2:3,d:1,w2:2},15,'Martina');return{q:c.q,a:c.s}})(),
+g:()=>{const w1=R(3,6),w2=R(1,3),t=R(3,6),h1=R(1,3),h2=R(2,4),d=R(1,Math.min(2,h2-1)),p={W:w1+t+w2,h1,w1,h2,d,w2},per=2*(p.W+h1+h2);return g4(p,R(Math.round(per*.25),Math.round(per*.6)),P(['Martina','Camila','Lucía','Sofía']))}},
+{n:'Multiplicación de polinomios',i:'Desarrolla y reduce.',ph:'ej: 7x^3y-5x^3y^2',
+o:{q:`−8mn(−6m<sup>2</sup>n<sup>3</sup>) + 12m<sup>3</sup>n<sup>4</sup> <br><br> −5x<sup>3</sup>y(4 − 8y) + 9x<sup>2</sup>(3xy − 5xy<sup>2</sup>)`,a:'1) 48m³n⁴ + 12m³n⁴ = 60m³n⁴.  2) −20x³y + 40x³y² + 27x³y − 45x³y² = 7x³y − 5x³y².'},
+g(){if(Math.random()<.5){const a=R(2,9),b=R(2,9),c=R(2,15),p=R(2,3),q=R(2,4),e=`m^${p+1}n^${q+1}`;return{t:'poly',q:`−${a}mn(−${b}${sp('m',p)}${sp('n',q)}) + ${c}${sp('m',p+1)}${sp('n',q+1)}`,a:(a*b+c)+e,w:[`${a*b-c}${e}`,`${c-a*b}${e}`,`${a*b+c}m^${p+2}n^${q+2}`],s:`(−${a})(−${b}) = ${a*b}; m·m<sup>${p}</sup> = m<sup>${p+1}</sup>; n·n<sup>${q}</sup> = n<sup>${q+1}</sup>. Luego ${a*b}m<sup>${p+1}</sup>n<sup>${q+1}</sup> + ${c}m<sup>${p+1}</sup>n<sup>${q+1}</sup> = <b>${H((a*b+c)+e)}</b>.`}}
+let a,b,c,d,e,f,A,B;do{a=R(2,6);b=R(2,5);c=R(2,9);d=R(2,9);e=R(2,5);f=R(2,6);A=d*e-a*b;B=a*c-d*f}while(!A||!B);const v1='x^3y',v2='x^3y^2';return{t:'poly',q:`−${a}${sp('x',3)}y(${b} − ${c}y) + ${d}${sp('x',2)}(${e}xy − ${f}x${sp('y',2)})`,a:pl([[A,v1],[B,v2]]),w:[pl([[d*e+a*b,v1],[B,v2]]),pl([[A,v1],[a*c+d*f,v2]]),pl([[-A,v1],[-B,v2]])],s:`Primera parte: −${a*b}x³y + ${a*c}x³y². Segunda parte: ${d*e}x³y − ${d*f}x³y². Se reducen los términos semejantes: <b>${H(pl([[A,v1],[B,v2]]))}</b>.`}}},
+{n:'Valor de m en una suma o resta',i:'Encuentra el valor de la letra.',
+o:{q:'A. m + 6 = 10 &nbsp; B. m + 8 = 15 &nbsp; C. m + 15 = 10 &nbsp; D. m − 8 = 12',a:'A: m = 4 · B: m = 7 · C: m = −5 · D: m = 20. El número que suma pasa restando y el que resta pasa sumando.'},
+g(){const v=P(['m','x','n','a']),k=R(0,2),a=R(3,15);let b,r,q;if(k==0){b=a+R(2,12);r=b-a;q=`${v} + ${a} = ${b}`}else if(k==1){b=R(2,a-1);r=b-a;q=`${v} + ${a} = ${b}`}else{b=R(2,15);r=a+b;q=`${v} − ${a} = ${b}`}
+return{t:'num',q,a:''+r,w:W(r,1),s:k<2?`${v} = ${b} − ${a} = <b>${H(r)}</b>.`:`${v} = ${b} + ${a} = <b>${r}</b>.`}}},
+{n:'Ecuaciones de primer grado',i:'Resuelve la igualdad.',
+o:{q:'−(−3m − 6) − 1 = −6m − 4 <br><br> −4(2m + 8) − 2m = 9m + 6',a:'1) 3m + 6 − 1 = −6m − 4 → 9m = −9 → m = −1.  2) −8m − 32 − 2m = 9m + 6 → −38 = 19m → m = −2.'},
+g(){const v=P(['m','x','n']),m0=R(-6,6)||1;if(Math.random()<.5){const a=R(1,5),b=R(1,9),c=R(1,5),d=R(2,9),e=c-b-(a+d)*m0;return{t:'num',q:`−(${lin(-a,v,-b)}) − ${c} = ${lin(-d,v,-e)}`,a:''+m0,w:W(m0,1),s:`Quita el paréntesis: ${lin(a,v,b)} − ${c} = ${lin(-d,v,-e)}. Reúne las ${v}: ${a+d}${v} = ${-e-b+c}. Entonces ${v} = <b>${m0}</b>.`}}
+const a=R(2,5),b=R(2,5),c=R(1,9),d=R(1,5),e=R(1,9),f=-(a*b+d)*m0-a*c-e*m0;return{t:'num',q:`−${a}(${lin(b,v,c)}) − ${d}${v} = ${lin(e,v,f)}`,a:''+m0,w:W(m0,1),s:`Distribuye: ${lin(-a*b-d,v,-a*c)} = ${lin(e,v,f)}. Reúne las ${v}: ${-a*b-d-e}${v} = ${f+a*c}. Entonces ${v} = <b>${m0}</b>.`}}},
+{n:'Intervalos de una desigualdad',i:'Escribe el intervalo (usa ∞ para infinito).',ph:'ej: (-∞, 6]',
+o:{q:'A. x ≤ 6 &nbsp; B. x ≥ −5 &nbsp; C. x ≤ −2 &nbsp; D. x &gt; 3',a:'A: (−∞, 6] · B: [−5, ∞) · C: (−∞, −2] · D: (3, ∞). Con ≤ o ≥ el extremo se incluye con corchete; con &lt; o &gt; va paréntesis.'},
+g(){const o=P(['<=','>=','<','>']),n=R(-9,9),all=[`(-∞,${n}]`,`(-∞,${n})`,`[${n},∞)`,`(${n},∞)`],a=o=='<='?all[0]:o=='<'?all[1]:o=='>='?all[2]:all[3];return{t:'set',q:`x ${H(o)} ${n<0?'−':''}${Math.abs(n)}`,a,w:all.filter(x=>x!=a),s:`${o[0]=='<'?'x toma valores menores':'x toma valores mayores'}${o.length>1?' o iguales':''}: el intervalo es <b>${H(a)}</b>.`}}},
+{n:'Desigualdades con fracciones',i:'Encuentra la solución (ej: x ≤ 3 o (-∞, 3]).',ph:'ej: x<=-5',
+o:{q:`${fr('−x + 10',2)} ≤ −${fr('4x + 3',6)} <br><br> ${fr('5x − 3',5)} &gt; ${fr('−4 − 7x',4)}`,a:'1) ×6: −3x + 30 ≤ −4x − 3 → x ≤ −33, es decir (−∞, −33].  2) ×20: 20x − 12 > −20 − 35x → x > −8/55, es decir (−8/55, ∞).'},
+g(){let al,be,ga,de,p,q,A,B,L;do{p=R(2,6);q=R(2,6);al=P([-1,1,-2,2,3,4,5,-3,-4,7]);ga=P([-1,1,-2,2,3,4,5,-3,-4,7]);be=R(-10,10);de=R(-10,10);L=p*q/gcd(p,q);A=L/p*al-L/q*ga;B=L/q*de-L/p*be}while(!A);
+const o=P(['<=','>=','<','>']),o2=A<0?fl(o):o,v=S(B,A),a=`x${o2}${v}`;return{t:'set',q:`${fr(lin(al,'x',be),p)} ${H(o)} ${fr(lin(ga,'x',de),q)}`,a,w:[...new Set([`x${fl(o2)}${v}`,`x${o2}${S(-B,A)}`,`x${fl(o2)}${S(-B,A)}`])].filter(x=>x!=a),s:`Multiplica por ${L} para quitar denominadores: ${lin(L/p*al,'x',L/p*be)} ${H(o)} ${lin(L/q*ga,'x',L/q*de)}. Reúne: ${A}x ${H(o)} ${B}.${A<0?' Al dividir por un número negativo se invierte el signo.':''} Solución: <b>${H(a)}</b>.`}}},
+{n:'Problema de edades (en el futuro)',i:'Plantea la ecuación y resuelve.',ph:'ej: 5 años',
+o:{q:'Actualmente Andrés tiene 24 años y Mónica 12. ¿Cuántos años deben transcurrir para que la edad de Andrés sea 3/2 la edad de Mónica?',a:'24 + x = 3/2 (12 + x) → 48 + 2x = 36 + 3x → x = 12 años. (Andrés 36, Mónica 24.)'},
+g(){const[N1,N2]=P([['Andrés','Mónica'],['Diego','Camila'],['Pablo','Lucía'],['Mateo','Valeria']]),[p,q]=P([[3,2],[4,3],[5,3],[5,4],[7,4]]);let k,t,a,b;do{k=R(2,9);t=R(2,15);a=p*k-t;b=q*k-t}while(b<4||a<=b);
+return{t:'nums',q:`Actualmente ${N1} tiene ${a} años y ${N2} ${b}. ¿Cuántos años deben transcurrir para que la edad de ${N1} sea ${fr(p,q)} la edad de ${N2}?`,a:t+' años',w:W(t,1).map(x=>x+' años'),s:`${a} + x = ${p}/${q}(${b} + x) → ${q*a} + ${q}x = ${p*b} + ${p}x → ${q*a-p*b} = ${p-q}x → x = <b>${t} años</b>.`}}},
+{n:'Problema de edades (suma)',i:'Plantea la ecuación y resuelve.',ph:'ej: Ana 20, Luis 5',
+o:{q:'Carmen tiene el triple de la edad de Pedro. Si entre la edad de Carmen y Pedro suman 68 años, ¿cuál es la edad de Carmen y de Pedro?',a:'Pedro = x, Carmen = 3x → 4x = 68 → x = 17. Pedro tiene 17 años y Carmen 51.'},
+g(){const[N1,N2]=P([['Carmen','Pedro'],['Rosa','Luis'],['Ana','Tomás'],['Elena','Jorge']]),k=R(2,5),B=R(8,30),A=k*B,Tt=(k+1)*B,w=['doble','triple','cuádruple','quíntuple'][k-2],f=(x,y)=>`${N1}: ${x}, ${N2}: ${y}`,a=f(A,B);
+return{t:'nums',q:`${N1} tiene el ${w} de la edad de ${N2}. Si entre la edad de ${N1} y ${N2} suman ${Tt} años, ¿cuál es la edad de cada uno?`,a,w:[...new Set([f(B,A),Tt%2?f(A+1,B-1):f(Tt/2,Tt/2),f(A-k,B+k),f(A+k,B-k)])].filter(x=>x!=a).slice(0,3),s:`${N2} = x, ${N1} = ${k}x → x + ${k}x = ${Tt} → ${k+1}x = ${Tt} → x = ${B}. <b>${N2}: ${B} años, ${N1}: ${A} años</b>.`}}}
+];
+
+/* ---------- cuestionario y práctica ---------- */
+const stt=T.map(()=>({m:'mc',ok:0,n:0,c:null}));
+$('#cu').innerHTML=T.map((t,i)=>`<div class=card id=c${i} data-t=0><div class=hd><h3>${i+1}. ${t.n}</h3><div class=ct><button class=on data-a=ct data-i=${i} data-t=0>Ejercicio</button><button data-a=ct data-i=${i} data-t=1>Práctica</button></div></div>
+<div class=po><p class=ins>${t.i}</p><div class=q>${t.o.q}</div><button data-a=sol data-i=${i}>Ver solución</button><div class=sol id=s${i} hidden>${H(t.o.a).replace(/\n/g,'<br>')}</div></div><div class=pp id=p${i}></div></div>`).join('');
+function nw(i){const s=stt[i];s.c=T[i].g();s.done=0;s.v='';s.msg='';s.opts=sh([s.c.a,...s.c.w.slice(0,3)]);pr(i)}
+function pr(i){const s=stt[i],c=s.c;let h=`<div class=bar><div class=seg>${[['mc','Opción múltiple'],['tx','Escribir respuesta']].map(([m,l])=>`<button data-a=mode data-i=${i} data-m=${m} class="${s.m==m?'on':''}">${l}</button>`).join('')}</div><span class=sc>Aciertos: ${s.ok}/${s.n}</span></div><p class=ins style="margin-top:8px">${T[i].i}</p><div class=q>${c.q}</div>`;
+if(s.m=='mc')h+='<div class=opts>'+s.opts.map((o,j)=>`<button class="opt${s.done?(o==c.a?' ok':j==s.pk?' ko':''):''}" data-a=pick data-i=${i} data-j=${j} ${s.done?'disabled':''}>${H(o)}</button>`).join('')+'</div>';
+else h+=`<div class=row><input class=ans id=in${i} data-i=${i} placeholder="${T[i].ph||'Tu respuesta'}" autocomplete=off ${s.done?'readonly':''}><button class=pri data-a=chk data-i=${i} ${s.done?'disabled':''}>Comprobar</button></div>`;
+if(s.msg)h+=`<div class=sol>${s.msg}</div>`;
+if(s.done)h+=`<div class="fb ${s.good?'ok':'ko'}">${s.good?'✔ ¡Correcto!':'✘ Respuesta correcta: '+H(c.a)}</div><div class=sol><b>Solución:</b> ${c.s}</div>`;
+h+=`<button class="nx${s.done?' pri':''}" data-a=nw data-i=${i}>Nuevo ejercicio ⟳</button>`;$('#p'+i).innerHTML=h;const e=$('#in'+i);if(e)e.value=s.v||''}
+function fin(i,v,g,pk){const s=stt[i];s.done=1;s.good=g;s.v=v;s.pk=pk;s.n++;if(g)s.ok++;pr(i)}
+
+/* ---------- simulacro ---------- */
+let sim=null,tm;
+function renderSim(){const el=$('#sim');
+if(!sim){el.innerHTML=`<div class=card><h3>Simulacro de examen</h3><p>Tendrás <b>1 hora</b> para resolver <b>${T.length} ejercicios</b> del mismo tipo que el cuestionario (con números nuevos). Escribe solo la respuesta final, sin ayudas. Al terminar el tiempo el examen se entrega solo.</p><p class=ins>Consejo: ten a mano hoja y lápiz para hacer los procedimientos, igual que en el examen real.</p><button class=pri data-a=sstart>Comenzar simulacro</button></div>`;return}
+if(!sim.sub){el.innerHTML=`<div class=stk><span>⏱ <b id=tm>60:00</b></span><button class=pri data-a=sfin>Entregar examen</button></div>`+sim.qs.map((q,i)=>`<div class=card><h3>${i+1}. ${T[i].n}</h3><p class=ins>${T[i].i}</p><div class=q>${q.q}</div><input class=ans placeholder="${T[i].ph||'Tu respuesta'}" autocomplete=off></div>`).join('');tick();return}
+const ok=sim.qs.map((q,i)=>chk(q,sim.ans[i])),sc=ok.filter(Boolean).length,u=Math.round(sim.used/1e3);
+el.innerHTML=`<div class=card><div class=big>${(sc/T.length*10).toFixed(1)} / 10</div><p><b>${sc}</b> de ${T.length} correctas · Tiempo usado: ${Math.floor(u/60)} min ${u%60} s</p><p class=ins>${sc==T.length?'¡Excelente! Estás lista para el examen. 🎉':sc>=T.length*.7?'¡Muy bien! Repasa los ejercicios que fallaste en la pestaña de práctica.':'Sigue practicando: revisa las soluciones y repite cada tema en su pestaña de práctica.'}</p><button class=pri data-a=snew>Nuevo simulacro</button></div>`+sim.qs.map((q,i)=>`<div class=card><h3>${ok[i]?'✔':'✘'} ${i+1}. ${T[i].n}</h3><div class=q>${q.q}</div><div class="fb ${ok[i]?'ok':'ko'}">Tu respuesta: ${sim.ans[i].trim()?sim.ans[i].replace(/</g,'&lt;'):'(sin responder)'}</div>${ok[i]?'':`<div class=sol><b>Correcta:</b> ${H(q.a)}</div>`}<div class=sol>${q.s}</div></div>`).join('');scrollTo(0,0)}
+function tick(){const l=Math.max(0,sim.end-Date.now()),e=$('#tm');if(e){e.textContent=String(Math.floor(l/6e4)).padStart(2,'0')+':'+String(Math.floor(l%6e4/1e3)).padStart(2,'0');e.classList.toggle('lo',l<3e5)}if(!l)simEnd()}
+function simEnd(){if(sim.sub)return;sim.sub=1;clearInterval(tm);sim.ans=[...document.querySelectorAll('#sim input.ans')].map(x=>x.value);sim.used=36e5-Math.max(0,sim.end-Date.now());renderSim()}
+
+/* ---------- eventos ---------- */
+let lf=null;
+document.addEventListener('click',e=>{const k=e.target.closest('[data-k]');if(k&&lf){lf.setRangeText(k.dataset.k,lf.selectionStart,lf.selectionEnd,'end');lf.focus();return}
+const b=e.target.closest('[data-a]');if(!b)return;const a=b.dataset.a,i=+b.dataset.i,s=stt[i];
+if(a=='main'){document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x==b));$('#cu').hidden=b.dataset.t!='0';$('#sim').hidden=b.dataset.t!='1';if(b.dataset.t=='1'&&!$('#sim').innerHTML)renderSim();$('#kp').hidden=b.dataset.t=='0'||!lf}
+else if(a=='ct'){const c=$('#c'+i);c.dataset.t=b.dataset.t;c.querySelectorAll('.ct button').forEach(x=>x.classList.toggle('on',x==b));if(b.dataset.t=='1'&&!s.c)nw(i)}
+else if(a=='sol')$('#s'+i).hidden=!$('#s'+i).hidden;
+else if(a=='mode'){s.m=b.dataset.m;nw(i)}
+else if(a=='nw')nw(i);
+else if(a=='pick'){const j=+b.dataset.j;fin(i,s.opts[j],s.opts[j]==s.c.a,j)}
+else if(a=='chk'){const v=$('#in'+i).value;if(!v.trim()){s.v=v;s.msg='Escribe una respuesta primero.';pr(i);$('#in'+i).focus();return}s.msg='';fin(i,v,!!chk(s.c,v))}
+else if(a=='sstart'){sim={qs:T.map(t=>t.g()),end:Date.now()+36e5,sub:0};renderSim();clearInterval(tm);tm=setInterval(tick,500);scrollTo(0,0)}
+else if(a=='sfin'){if(!sim.cf){sim.cf=1;b.textContent='¿Seguro? Pulsa otra vez';setTimeout(()=>{if(!sim.sub){sim.cf=0;b.textContent='Entregar examen'}},4000)}else simEnd()}
+else if(a=='snew'){sim=null;renderSim();scrollTo(0,0)}});
+document.addEventListener('focusin',e=>{if(e.target.matches('input.ans')){lf=e.target;$('#kp').hidden=0}});
+document.addEventListener('keydown',e=>{if(e.key=='Enter'&&e.target.matches('#cu input.ans'))$('#cu [data-a=chk][data-i="'+e.target.dataset.i+'"]').click()});
+$('#kp').addEventListener('mousedown',e=>e.preventDefault());
+</script></body></html>
